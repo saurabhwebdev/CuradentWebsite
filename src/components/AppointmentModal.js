@@ -8,65 +8,70 @@ function AppointmentModal({ isOpen, onClose }) {
     phone: '',
     date: '',
     time: '',
-    service: 'general',
+    service: '',
+    message: ''
+  });
+
+  const [submitStatus, setSubmitStatus] = useState({
+    type: '',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus({ type: '', message: '' });
-
-    // Format the date and time for email
-    const formattedDate = new Date(formData.date).toLocaleDateString();
-    const formattedTime = formData.time;
-
-    // Prepare email template parameters
-    const templateParams = {
-      to_email: ['hello@curadent.in', 'hellocuradent@gmail.com', 'kritilaxmijha@gmail.com'], // Multiple recipients
-      from_name: formData.name,
-      from_email: formData.email,
-      phone: formData.phone,
-      appointment_date: formattedDate,
-      appointment_time: formattedTime,
-      service: formData.service,
-      message: formData.message,
-    };
-
+    
     try {
-      // Replace these with your EmailJS credentials
-      const result = await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        templateParams,
-        'YOUR_PUBLIC_KEY'
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        preferred_date: formData.date,
+        preferred_time: formData.time,
+        service: formData.service,
+        message: formData.message,
+        reply_to: formData.email
+      };
+
+      console.log('Sending email with params:', templateParams);
+
+      const response = await emailjs.send(
+        'service_hdhm8fn',
+        'template_757ndb6',
+        templateParams
       );
 
-      if (result.status === 200) {
-        setSubmitStatus({
-          type: 'success',
-          message: 'Appointment request sent successfully! We\'ll contact you shortly.'
-        });
-        setTimeout(() => {
-          onClose();
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            date: '',
-            time: '',
-            service: 'general',
-            message: ''
-          });
-        }, 2000);
-      }
+      console.log('Email sent successfully:', response);
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Appointment request sent successfully! We will contact you soon.'
+      });
+
+      // Clear form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        time: '',
+        service: '',
+        message: ''
+      });
+
+      // Close modal after delay
+      setTimeout(() => {
+        onClose();
+        setSubmitStatus({ type: '', message: '' });
+      }, 3000);
+
     } catch (error) {
+      console.error('Error sending email:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'Something went wrong. Please try again later.'
+        message: 'Failed to send appointment request. Please try again.'
       });
     } finally {
       setIsSubmitting(false);
@@ -194,7 +199,6 @@ function AppointmentModal({ isOpen, onClose }) {
 
             <button
               type="submit"
-              disabled={isSubmitting}
               className={`w-full py-3 px-6 text-white bg-gradient-to-r from-secondary to-primary rounded-lg 
                 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:opacity-90'} 
                 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary/20`}
