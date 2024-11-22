@@ -9,7 +9,7 @@ function TeleConsult() {
   const [showPaymentForm, setShowPaymentForm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [transactionId, setTransactionId] = useState('');
-  const consultationFee = 1;
+  const consultationFee = 299;
   const upiId = "9900379125@ybl";
   const [isCalendlyLoading, setIsCalendlyLoading] = useState(true);
 
