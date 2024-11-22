@@ -14,6 +14,7 @@ import Services from './components/Services';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import TeleConsult from './components/TeleConsult';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,6 +51,7 @@ function App() {
             </div>
           </>
         } />
+        <Route path="/teleconsult" element={<TeleConsult />} />
       </Routes>
       <Footer />
       <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
