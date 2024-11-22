@@ -99,25 +99,17 @@ function Services() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative"
+              className="group relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
             >
-              <Link 
-                to={service.link}
-                className="block bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
-              >
-                <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
-                  index % 2 === 0 ? 'bg-primary/10' : 'bg-secondary/10'
-                } group-hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-3xl">{service.icon}</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">{service.description}</p>
-                <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-primary">Learn more →</span>
-                </div>
-              </Link>
+              <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
+                index % 2 === 0 ? 'bg-primary/10' : 'bg-secondary/10'
+              } group-hover:scale-110 transition-transform duration-300`}>
+                <span className="text-3xl">{service.icon}</span>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                {service.title}
+              </h3>
+              <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
