@@ -23,3 +23,78 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Google Reviews Widget Customization */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db {
+  /* Container styling */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Review cards styling */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .WidgetLayout__Container {
+  background: transparent !important;
+}
+
+/* Individual review card */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__Container {
+  background: white !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+  transition: all 0.3s ease !important;
+  padding: 1.5rem !important;
+  margin: 0.5rem !important;
+}
+
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__Container:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1) !important;
+  transform: translateY(-2px);
+}
+
+/* Review text styling */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__ReviewText {
+  color: #4B5563 !important; /* gray-600 */
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+/* Reviewer name styling */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__ReviewerName {
+  color: #111827 !important; /* gray-900 */
+  font-weight: 600 !important;
+}
+
+/* Star rating color */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__RatingIcon {
+  color: var(--primary) !important; /* Using your primary color */
+}
+
+/* Navigation arrows */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .NavigationArrow {
+  background: linear-gradient(to right, var(--primary), var(--secondary)) !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  opacity: 0.9 !important;
+}
+
+/* Pagination dots */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .NavigationDots__Dot--Active {
+  background: linear-gradient(to right, var(--primary), var(--secondary)) !important;
+}
+
+/* Remove unwanted elements */
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .WidgetHeader__PoweredBy,
+.elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .WidgetHeader__Container {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__Container {
+    padding: 1rem !important;
+  }
+  
+  .elfsight-app-bbd635b4-213a-4054-819a-2be7bc6ba7db .ReviewItem__ReviewText {
+    font-size: 0.875rem !important;
+  }
+}
