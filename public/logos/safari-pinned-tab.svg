@@ -1,0 +1,25 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M50 5
+       A 45 45 0 1 1 50 95
+       A 45 45 0 1 1 50 5
+       Z
+       M50 15
+       A 35 35 0 1 0 50 85
+       A 35 35 0 1 0 50 15
+       Z"
+    fill="black"
+  />
+  <text
+    x="50"
+    y="63"
+    font-size="38"
+    font-weight="700"
+    font-family="Arial, sans-serif"
+    fill="black"
+    text-anchor="middle"
+    style="letter-spacing: -1px"
+  >
+    CD
+  </text>
+</svg> 
