@@ -24,11 +24,14 @@ module.exports = {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'slide-in-left': 'slideInLeft 0.8s ease-out',
         'slide-in-right': 'slideInRight 0.8s ease-out',
-        'gradient-x': 'gradient-x 3s ease-in-out infinite',
+        'gradient-x': 'gradient-x 8s ease infinite',
+        'gradient-y': 'gradient-y 15s ease infinite',
+        'gradient-xy': 'gradient-xy 15s ease infinite',
         'wiggle': 'wiggle 3s ease-in-out infinite',
         'wiggle-slow': 'wiggle 4s ease-in-out infinite',
         'bounce-slight': 'bounce-slight 3s ease-in-out infinite',
         'modal-up': 'modal-up 0.3s ease-out',
+        'blob': 'blob 7s infinite',
       },
       keyframes: {
         float: {
@@ -72,9 +75,11 @@ module.exports = {
         'gradient-x': {
           '0%, 100%': {
             'background-position': '200% 0',
+            'backdrop-filter': 'blur(8px) brightness(100%)',
           },
           '50%': {
             'background-position': '0 0',
+            'backdrop-filter': 'blur(8px) brightness(110%)',
           },
         },
         wiggle: {
@@ -93,6 +98,20 @@ module.exports = {
           '100%': {
             opacity: '1',
             transform: 'translateY(0)',
+          },
+        },
+        blob: {
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.1)',
+          },
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
           },
         },
       },
