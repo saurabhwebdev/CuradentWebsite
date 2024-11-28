@@ -1,5 +1,6 @@
 {
   "name": "curadent",
+  "homepage": "https://curadent.in",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

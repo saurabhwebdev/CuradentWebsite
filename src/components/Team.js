@@ -4,43 +4,43 @@ import { motion } from 'framer-motion';
 function Team({ openAppointmentModal }) {
   const team = [
     {
-      name: "Dr. Priya Sharma",
-      role: "Periodontist",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80",
-      education: "MDS - Periodontics",
-      experience: "12+ Years Experience",
-      specialization: "Gum Disease & Implants",
-      achievements: [
-        "Best Periodontist Award 2023",
-        "Published in International Journal of Dentistry"
-      ],
-      languages: ["English", "Hindi", "Kannada"]
-    },
-    {
-      name: "Dr. Rajesh Kumar",
-      role: "Orthodontist",
-      image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80",
-      education: "MDS - Orthodontics",
-      experience: "15+ Years Experience",
-      specialization: "Braces & Aligners",
-      achievements: [
-        "Certified Invisalign Provider",
-        "Advanced Orthodontics Fellowship"
-      ],
-      languages: ["English", "Hindi", "Telugu"]
-    },
-    {
-      name: "Dr. Anjali Patel",
-      role: "Pediatric Specialist",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80",
-      education: "MDS - Pediatric Dentistry",
+      name: "Dr. Kritilaxmi Jha",
+      role: "Founder & Clinic Head",
+      image: "https://i.postimg.cc/PrRsM9My/Whats-App-Image-2024-11-28-at-5-41-09-PM.jpg",
+      education: "MDS - Prosthodontics",
       experience: "10+ Years Experience",
-      specialization: "Children's Dentistry",
+      specialization: "Aesthetic dentistry, Implants & Full Mouth Rehabilitation & Dentures",
       achievements: [
-        "Child Psychology Certification",
-        "Pediatric Emergency Care Expert"
+        "Resource Person at ILAMED",
+        "Attached to PD Hinduja Sindhi Hospital & HCG Hospital"
+              ],
+      languages: ["English", "Hindi", "Kannada", "Tamil", "Telugu"]
+    },
+    {
+      name: "Dr. J. Raghunand Sindhe",
+      role: "Consultant Implantologist",
+      image: "https://i.postimg.cc/cHHSsWxp/Whats-App-Image-2024-11-28-at-5-35-44-PM.jpg",
+      education: "MDS - Oral Medicine & Radiology",
+      experience: "15+ Years Experience",
+      specialization: "Dental Implants & Dental Radiology and Medicine",
+      achievements: [
+        "Fellowship in Implantology & Persuing PHD",
+        "Convener IDA Bengaluru Chapter"
       ],
-      languages: ["English", "Hindi", "Gujarati"]
+      languages: ["English", "Hindi", "Kannada", "Marathi"]
+    },
+    {
+      name: "Dr. Manjunath",
+      role: "Consultant Oral & Maxillofacial Surgeon",
+      image: "https://i.postimg.cc/6q73HRF1/young-handsome-physician-medical-robe-with-stethoscope.jpg",
+      education: "MDS - Oral & Maxillofacial Surgery",
+      experience: "12+ Years Experience",
+      specialization: "Oral & Maxillofacial Surgery, Cranio-Maxillofacial Surgery & Oral Onco-Surgery",
+      achievements: [
+        "Trauma Management & Emergency Care Expert",
+        "Dental Disimpaction Expert"
+      ],
+      languages: ["English", "Hindi", "Kannada", "Telugu"]
     }
   ];
 
